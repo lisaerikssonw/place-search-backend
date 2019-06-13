@@ -2,6 +2,10 @@ const express = require('express')
 const router = express.Router()
 const axios = require('axios')
 
+router.get('/hello', (req, res) => {
+  res.json({ hello: 'world' })
+})
+
 router.get('/test', (req, res) => {
   console.log('query params', req.query)
 
